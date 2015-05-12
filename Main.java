@@ -107,6 +107,7 @@ public class Main {
 		System.out.println("Utilizacion en porcentaje de B: "+fB);
 		System.out.println("Atendidos: "+c);
 		System.out.println("Rechazados: "+numRechazados);
+		System.out.println("Total de clientes: "+(c+numRechazados));
 		System.out.println("Utilizacion de Router: "+u);
 		System.out.println("Promedio de paquetes en memoria: "+l);
 		System.out.println("Tiempo de espera entre llegada de paquete y transmision final: "+w);
