@@ -46,6 +46,7 @@ public class Main {
 		int om=0;
 		boolean ver=true;
 		double [] []cosas=new double[3000][2];
+		FileWriter fr = new FileWriter("Resultados.txt");
 		  while (ver)
 		  {
 		    if (entradaT < salidaT)            
@@ -61,6 +62,7 @@ public class Main {
 		      if (mult[n]>metrica){
 		    	  numRechazados++;
 		      }
+		      fr.write("Entra cliente: "+id+" en el tiempo: "+entradaT);
 		      if (n == 1)
 		      {
 		        inicio = t;              
@@ -76,23 +78,24 @@ public class Main {
 		      id2++;
 		      cosas[id2][o]= t;
 		      c++;                      
-		      if (n > 0)
-		        salidaT = t + parExp(B, beta);
+		      if (n > 0){
+		        salidaT = t + parExp(B, beta);}
 		      else
 		      {
 		        salidaT = tiempoT;
 		        b = b + t - inicio;      
 		      }
+		      fr.write("Sale cliente: "+id2+" en el tiempo: "+salidaT);
 		    }
 		    if(t < finT){
 		    	ver=false;
 		    }
 		  }
+		  fr.close();
 		  double x;                
 		  double u;                
 	      double l;                  
 		  double w;       
-		  fr.close();
 
 		  x = c / t; 
 		  u = b / t;   
