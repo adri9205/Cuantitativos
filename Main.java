@@ -92,6 +92,7 @@ public class Main {
 		  double u;                
 	      double l;                  
 		  double w;       
+		  fr.close();
 
 		  x = c / t; 
 		  u = b / t;   
