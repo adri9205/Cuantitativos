@@ -32,11 +32,11 @@ public class Main {
 		double fB=(((alfa-1)*beta*B)/((beta-1)*alfa*A))*100;
 		double finT = tiempoT;     
 		double t = 0.0;          
-		double   entradaT = 0;         
-		double   salidaT = tiempoT;     
+		double entradaT = 0;         
+		double salidaT = tiempoT;     
 		int n=0;           
-		int id=0;         
-		int id2=0;        
+		int xname=0;         
+		int xname2=0;        
 		int c=0;           
 		double b=0;             
 		double serv1=0;           
@@ -54,15 +54,15 @@ public class Main {
 		      t = entradaT;
 		      serv1 = serv1 + n * (t - fin);
 		      n++;
-		      id++;   
+		      xname++;   
 		      fin = t;           
-		      cosas[id][om] = t;
+		      cosas[xname][om] = t;
 		      entradaT = t + parExp(A,alfa);
 		      mult[n]=mult[n-1]+parExp(A,alfa);
 		      if (mult[n]>metrica){
 		    	  numRechazados++;
 		      }
-		      fr.write("Entra cliente: "+id+" en el tiempo: "+entradaT);
+		      fr.write("Entra cliente: "+xname+" en el tiempo: "+entradaT);
 		      if (n == 1)
 		      {
 		        inicio = t;              
@@ -75,8 +75,8 @@ public class Main {
 		      serv1 = serv1 + n * (t - fin);
 		      n--;
 		      fin = t;               
-		      id2++;
-		      cosas[id2][o]= t;
+		      xname2++;
+		      cosas[xname2][o]= t;
 		      c++;                      
 		      if (n > 0){
 		        salidaT = t + parExp(B, beta);}
@@ -85,9 +85,9 @@ public class Main {
 		        salidaT = tiempoT;
 		        b = b + t - inicio;      
 		      }
-		      fr.write("Sale cliente: "+id2+" en el tiempo: "+salidaT);
+		      fr.write("Sale cliente: "+xname2+" en el tiempo: "+salidaT);
 		    }
-		
+		   
 		  }
 		  fr.close();
 		  double x;                
