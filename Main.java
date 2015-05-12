@@ -47,7 +47,7 @@ public class Main {
 		boolean ver=true;
 		double [] []cosas=new double[3000][2];
 		FileWriter fr = new FileWriter("Resultados.txt");
-		  while (ver)
+		  while (t < finT)
 		  {
 		    if (entradaT < salidaT)            
 		    {
@@ -87,9 +87,7 @@ public class Main {
 		      }
 		      fr.write("Sale cliente: "+id2+" en el tiempo: "+salidaT);
 		    }
-		    if(t < finT){
-		    	ver=false;
-		    }
+		
 		  }
 		  fr.close();
 		  double x;                
